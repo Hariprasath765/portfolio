@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        
+    @import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width:100vw;
+            height:100vh;
+            background-color: black;
+        }
+        nav{
+            width:100%;
+            height: 50px;
+            padding: 15px;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: aqua;
+            margin-top: 10px;
+            border-bottom: 4px solid  crimson;
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 19;
+        }
+        
+        .sidenav ul li{
+            list-style: none;
+            padding: 10px;
+            display: inline-block;
+        }
+        .sidenav ul li a{
+            display: inline-block;
+            text-decoration: none;
+            color: aliceblue;
+            margin-left: 5px;
+        }
+        .photo{
+            width: 100%;
+            height: 500px;
+            padding: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: black;
+        }
+        .photo .para{
+            width: 500px;
+            height: 300px;
+            text-align: justify;
+            color: aqua;
+            font-size:larger;
+            color: aqua;
+            animation: anim3 1s linear;
+        }
+        .photo .para p::first-letter{
+            font-size: xx-large;
+            color: aliceblue;
+            font-style: italic;
+        }
+        @keyframes anim3{
+            from{
+                color: transparent;
+            }
+            to{
+                color: aqua;
+            }
+        }
+
+        .photo .para h1{
+            text-align: center;
+            font-style: italic;
+            font-size: 50px;
+            transform: translateX(-700px);
+            animation: anim1 1s linear 1;
+            animation-fill-mode: forwards;
+            margin-bottom: 30px;
+            color: aqua;
+            
+            font-weight: 400;
+            font-style: normal
+        }
+        @keyframes anim1 {
+            to{
+                transform: translateX(0);
+            }
+        }
+        .photo .img{
+            width: 360px;
+            height: 360px;
+            border: 1px solid black;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 
+                        0 0 25px aqua,
+                        0 0 50px aqua;
+        }
+        .photo .img img{
+            width: 100%;
+            height: 100%;
+
+        }
+        .skills{
+            width: 100%;
+            height:500px;
+            background-color: black;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .skills .box1{
+            width: 230px;
+            height: 300px;
+            border: 2px solid black;
+            box-shadow: 
+                        0 0 25px aqua,
+                        0 0 50px aqua;
+                        
+            color: aliceblue;
+        }
+        .skills .box1 div{
+            text-align: center;
+            padding: 10px;
+            padding-top: 20px;
+            font-size: larger;
+        }
+        .skills .box1 p{
+            padding: 15px;
+        }
+        .skh1{
+            text-align: center;
+        }
+        footer{
+            width: 100%;
+            height: 400px;
+            padding: 50px;
+        }
+        footer div{
+            margin-top: 20px;
+        }
+        footer div pre{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+        }
+        main{
+            width: 100%;
+            height: 300px;
+            padding: 70px;
+        }
+        main h3{
+            text-align: center;
+            font-size: x-large;
+        }
+        main p::first-letter{
+            font-size: xx-large;
+            color: red;
+        }
+        main p{
+            text-align: justify;
+            font-size: medium;
+            margin-top: 30px;
+        }
+        .about h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .about{
+            width: 800px;
+            height: 400px;
+            margin: 0 auto;
+            padding: 70px;
+            font-size: x-large;
+            
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+            z-index: 6;
+            background-color: black;
+            margin-bottom: 30px;
+        }
+        .about::after{
+            content: '';
+            
+            position: absolute;
+            
+            
+            top: -50%;
+            width: 180px;
+            height: 880px;
+            background-color: blue;
+            animation:anim5 3s linear infinite;
+            left: 40%;
+            overflow: hidden;
+            z-index: -8;
+        }
+        @keyframes anim5{
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+        .about::before{
+            content: '';
+            position: absolute;
+            width: auto;
+            height: auto;
+            inset: 8px;
+            z-index: -2;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <nav>
+        <h1>Digital portfolio</h1>
+        <div class="sidenav">
+            <ul>
+                <li><i class="fa-solid fa-house"></i><a href="">Home</a></li>
+                <li><i class="fa-solid fa-house"></i><a href="#about">About</a></li>
+                <li><i class="fa-solid fa-award"></i><a href="#skillsh1">Skills</a></li>
+                <li><i class="fa-solid fa-file"></i><a href="#qr">Project</a></li>
+                <li><i class="fa-regular fa-address-book"></i><a href="#con">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="photo" style="border-bottom: 4px solid crimson;">
+        <div class="para" >
+            <h1>I am Hari Prasath</h1>
+            <p>I am completed b.sc computer science in Udumalpet at bharathiyar University. I have learnd Html,Css and Python. I am intersted in front-end developer </p>
+        </div>
+        <div class="img"><img src="./IMG20240406090701.jpg" alt=""></div>
+    </div>
+    <div class="about" style="color: aliceblue;">
+        <h1 style="color: aliceblue;" id="about">About me</h1>
+        Seeking a entry level position in the field of computer science,leveraging my strong foundation in B.sc Computer Science and passion for technology in contribute innovative solution, while continually enhancing my skills in a collaborative and growth-oriented environment
+    </div>
+    <div style="border: 4px solid crimson;" ></div>
+    <h1 class="skh1" id="skillsh1" style="color: aliceblue;margin-top: 20px;">Skills</h1>
+    <div class="skills" style="border-bottom: 4px solid crimson;">
+         <div class="box1"><div>HTML</div><p>HTML, or HyperText Markup Language, is the foundational language used to create web pages. It provides the structure and content of a webpage, allowing browsers to render and display text, images, and other media in a user-friendly format.</p></div>
+         <div class="box1"><div>CSS</div><p>CSS, or Cascading Style Sheets, is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.</p></div>
+         <div class="box1"><div>PYTHON</div><p>Python is a programming language that is interpreted, object-oriented, and considered to be high-level too. Python is one of the easiest yet most useful programming languages which is widely used in the software industry. </p></div>
+    </div>
+    <main id="qr" style="border-bottom: 4px solid crimson;">
+        <h3 style="color: aliceblue;">QR CODE AT BUS STOP</h3>
+        <p style="color: aliceblue;"> QR codes have the ability to bring the business outside the retail stores and into the various pockets of public spaces such as bus stops, restaurants, taxis and buses, lampposts and other structures. This has made QR Codes one of the most popular digital marketing tools across every industry.
+            This project proposes the development of a comprehensive bus route management system using QR code on a web-based platform. The system integrates QR codes at bus stops allowing passengers to access detailed information such as real-time bus schedule ,route through their mobile devices .The web interface will feature a user-friendly design ,enabling passengers to scan QR codes effortlessly and retrieve pertinent information .The system’s backend will leverage data analytics to optimize bus allocation ,minimize waiting times ,and enhance overall operational efficiency .Through this initiative ,This aim to create a technologically advanced and user-centric public transportation experience that contributes to the sustainability of urban transit systems. Its user-friendly graphical mode will make it to generate the QR code.</p>
+    </main>
+    <footer>
+        <div style="color: aliceblue;">
+            <h1 style="color: aliceblue;text-align: center;" ><span style="border-bottom: 5px solid aqua;" id="con">Contact us</span></h1>
+            <center>
+            <div><pre>
+Address : 8a,omc lane,  
+           Udumalpet
+           <br>
+Phone no  : 8508977811
+            <br>           
+Email   : <a href="mailto:" style="text-decoration: none; color: aliceblue;">hariprasath4902@gmail.com</a>
+
+
+            </pre>
+        </center>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
